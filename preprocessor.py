@@ -24,7 +24,8 @@ def preprocess(data):
     df['datetime'] = pd.to_datetime(
     df['datetime'].str.replace("\u202f", " ", regex=False).str.replace(" -", "", regex=False).str.strip(),
     errors="coerce",
-    dayfirst=True)
+    dayfirst=True,
+    infer_datetime_format=True)
 
     df = df.dropna(subset=['datetime'])
 
