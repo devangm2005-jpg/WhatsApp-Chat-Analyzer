@@ -8,13 +8,26 @@ def preprocess(data):
     messages = re.split(pattern,data)[1:]
     dates = re.findall(pattern,data)
 
-    df = pd.DataFrame({'user_message':messages, 'datetime':dates})
+#     df = pd.DataFrame({'user_message':messages, 'datetime':dates})
+#     df['datetime'] = pd.to_datetime(
+#     df['datetime'].str.replace("\u202f", " ", regex=False).str.replace(" -", "", regex=False).str.strip(),
+#     errors="coerce",
+#     dayfirst=True,
+#     infer_datetime_format=True
+# )
+    
+
+    df = pd.DataFrame({'user_message': messages, 'datetime': dates})
+
+    df['datetime'] = df['datetime'].astype(str)
+
     df['datetime'] = pd.to_datetime(
     df['datetime'].str.replace("\u202f", " ", regex=False).str.replace(" -", "", regex=False).str.strip(),
     errors="coerce",
-    dayfirst=True,
-    infer_datetime_format=True
-)
+    dayfirst=True)
+
+    df = df.dropna(subset=['datetime'])
+
 
     users = []
     messages = []
