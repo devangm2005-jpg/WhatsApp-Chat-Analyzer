@@ -11,8 +11,14 @@ st.sidebar.title('WhatsApp Chat Analyzer')
 uploaded_file = st.sidebar.file_uploader("Choose a file")
 if uploaded_file is not None:
     bytes_data = uploaded_file.getvalue()     # To read file as bytes:
-    data = bytes_data.decode("utf-8")
-    df = preprocess(data)
+    try:
+        data = bytes_data.decode("utf-8")
+    except UnicodeDecodeError:
+        try:
+            data = bytes_data.decode("utf-16")
+        except UnicodeDecodeError:
+            data = bytes_data.decode("latin-1")
+        df = preprocess(data)
 
     st.dataframe(df)
 
