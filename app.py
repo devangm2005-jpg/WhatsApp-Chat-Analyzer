@@ -18,7 +18,7 @@ if uploaded_file is not None:
             data = bytes_data.decode("utf-16")
         except UnicodeDecodeError:
             data = bytes_data.decode("latin-1")
-        df = preprocess(data)
+    df = preprocess(data)
 
     st.dataframe(df)
 
