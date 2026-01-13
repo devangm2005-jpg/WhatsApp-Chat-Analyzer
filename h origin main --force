@@ -1,0 +1,14 @@
+[33mcommit ccc88e324acc95b3873a99e62920e3c1c2dfe49e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: devangm2005-jpg <devangm2005@gmail.com>
+Date:   Tue Jan 13 09:42:46 2026 +0530
+
+    first commit
+
+ .gitignore                   |   34 [32m+[m
+ analytics.py                 |  156 [32m+++++[m
+ app.py                       |  154 [32m+++++[m
+ preprocessor.py              |   55 [32m++[m
+ requirements.txt             |    9 [32m+[m
+ stop_hinglish.txt            | 1055 [32m+++++++++++++++++++++++++++++[m
+ whatsapp-chat-analysis.ipynb | 1500 [32m++++++++++++++++++++++++++++++++++++++++++[m
+ 7 files changed, 2963 insertions(+)
