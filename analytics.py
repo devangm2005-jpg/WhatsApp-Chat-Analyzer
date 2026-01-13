@@ -152,5 +152,6 @@ def sentiment_analysis(selected_user, df):
         label = "Negative 😠"
     else:
         label = "Neutral 😐"
+    
 
     return round(avg_sentiment, 3), label
