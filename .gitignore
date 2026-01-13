@@ -1,0 +1,34 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment folders (common names)
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store      # Mac
+Thumbs.db      # Windows
+
+# Streamlit cache (optional)
+.streamlit/
+
+# Jupyter Notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# IDE/project specific files
+.vscode/
+.idea/
+
+# Environment variables file
+.env
+
+# Logs
+*.log
+
+# Data or sensitive files (optional)
+*.csv
+*.xlsx
